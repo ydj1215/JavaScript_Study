@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 500px;
+        height: 300px;
+        border: 1px solid palevioletred;
+        background-color: wheat;
+      }
+
+      .line {
+        background-color: yellow;
+        border: 5px solid yellow;
+        border-radius: 10px;
+      }
+
+      .rst {
+        color: red;
+        background-color: aquamarine;
+        font-size: 30pt;
+        font-weight: bold;
+      }
+
+      .score {
+        color: darkblue;
+        font-size: 25pt;
+        color: slateblue;
+        background-color: violet;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>성적을 입력받아 학점 출력하기</h1>
+      <!-- 0~100 점 X -> 오류 -->
+      <!-- 90점 이상 A, 80점 이상 B, 70점 이상 C, 60점 이상 D, 나머지 F-->
+      <script>
+        let score, rst;
+        while (1) {
+          score = Number(prompt("성적을 입력하세요 : "));
+          if (score > 100 || score < 0) {
+            alert("성적은 0점에서 100점 사이어야 합니다.");
+            // return;
+          } else break;
+        }
+        if (score > 90) {
+          rst = "A";
+        } else if (score > 80) {
+          rst = "B";
+        } else if (score > 70) {
+          rst = "C";
+        } else if (score > 60) {
+          rst = "D";
+        } else {
+          rst = "F";
+        }
+        document.write(
+          `<h2><span class="line">당신의 점수는 <span class = score>${score}</span>점이고, 등급은 <span class = "rst">${rst}</span>입니다.<span></h2>`
+        );
+      </script>
+    </div>
+  </body>
+</html>

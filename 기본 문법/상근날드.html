@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 400px;
+        height: 200px;
+        background-color: aquamarine;
+      }
+      .ham {
+        background-color: yellow;
+      }
+      .juice {
+        background-color: violet;
+      }
+      .result {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>상근날드</h1>
+      <script>
+        let h_1 = Number(prompt("햄버거 가격 (1) : "));
+        let h_2 = Number(prompt("햄버거 가격 (2) : "));
+        let h_3 = Number(prompt("햄버거 가격 (3) : "));
+        let j_1 = Number(prompt("음료 가격 (1) : "));
+        let j_2 = Number(prompt("음료 가격 (2) : "));
+
+        h_list = {
+          맥도날드: h_1,
+          롯데리아: h_2,
+          버거킹: h_3,
+        };
+
+        j_list = {
+          콜라: j_1,
+          사이다: j_2,
+        };
+
+        let h_min = Infinity; // 초기값 설정
+        for (let h in h_list) {
+          if (h_min > h_list[h]) {
+            h_min = h_list[h];
+          }
+        }
+
+        let j_min = Infinity; // 초기값 설정
+        for (let j in j_list) {
+          if (j_min > j_list[j]) {
+            j_min = j_list[j];
+          }
+        }
+        document.write(
+          `<div class="ham">햄버거 가격 : ${JSON.stringify(h_list)}</div>`
+        );
+        document.write(
+          `<div class="juice">음료 가격 : ${JSON.stringify(j_list)}</div>`
+        );
+        document.write(`<div class="result">${h_min + j_min - 50}</div>`);
+      </script>
+    </div>
+  </body>
+</html>

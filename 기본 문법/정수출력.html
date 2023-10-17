@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .nbyn {
+        display: inline-block;
+        background-color: yellow;
+        font-size: 2em;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        border: 1px solid orange;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 정수를 입력 받아 n*n 출력 -->
+    <!-- 3
+    1 2 3
+    4 5 6
+    7 8 9 -->
+    <div class="container">
+      <p>정수 출력</p>
+      <script>
+        let n = Number(prompt("정수를 입력하세요. : "));
+        n = Number(n);
+        for (let i = 1; i <= n * n; i++) {
+          document.write("<span class=nbyn>" + i + " " + "</span>");
+          if (i % n == 0) document.write("<br>");
+        }
+      </script>
+    </div>
+  </body>
+</html>
