@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .top {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+      }
+
+      .one,
+      .two,
+      .three {
+        width: 300px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: bold;
+      }
+
+      .one:hover,
+      .two:hover,
+      .three:hover {
+        transform: scale(1.1);
+      }
+
+      .one {
+        background-color: green;
+      }
+
+      .two {
+        background-color: orange;
+      }
+
+      .three {
+        background-color: purple;
+      }
+
+      .content {
+        width: 100%;
+        height: 500px;
+        border: 10px solid gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">
+        <div class="one" onclick="toGreen()">Green</div>
+        <div class="two" onclick="toOrange()">Orange</div>
+        <div class="three" onclick="toPurple()">Purple</div>
+      </div>
+      <div class="content"></div>
+    </div>
+    <script>
+      function toGreen() {
+        alert("초록색으로 변해라!");
+        const content = document.querySelector(".content");
+        content.style.backgroundColor = "green";
+      }
+
+      function toOrange() {
+        alert("주황색으로 변해라!");
+        const content = document.querySelector(".content");
+        content.style.backgroundColor = "orange";
+      }
+
+      function toPurple() {
+        alert("보라색으로 변해라!");
+        const content = document.querySelector(".content");
+        content.style.backgroundColor = "purple";
+      }
+    </script>
+  </body>
+</html>

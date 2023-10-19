@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .itz {
+        width: 300px;
+        height: 300px;
+        background-image: url("있지.jpeg");
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      .what {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="itz"></div>
+      <button class="look" onclick="_open()">상세 설명 보기</button>
+      <div class="what">
+        <h2>그룹 있지</h2>
+        <span>요즘 인기가 많은 아이돌 그룹이다.</span>
+        <br />
+        <button onclick="_close()">상세 설명 닫기</button>
+      </div>
+    </div>
+    <script>
+      // open() 과 close()는 함수의 이름으로 사용 불가
+      function _open() {
+        const what = document.querySelector(".what");
+        what.style.display = "flex";
+        what.style.flexDirection = "column";
+        const look = document.querySelector(".look");
+        look.style.display = "none";
+      }
+
+      function _close() {
+        const what = document.querySelector(".what");
+        what.style.display = "none";
+        const look = document.querySelector(".look");
+        look.style.display = "flex";
+      }
+    </script>
+  </body>
+</html>

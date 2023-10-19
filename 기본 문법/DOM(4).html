@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #text {
+        color: white;
+      }
+
+      .active {
+        color: aquamarine;
+      }
+
+      .red-color {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="text">글자를 입력합니다.</p>
+    <span>내용을 입력합니다.</span>
+    <a href="https://www.google.com">구글</a>
+    <script>
+      // 스타일 조작하기
+      const pEl = document.querySelector("#text");
+
+      // background-color => backgroundColor 카멜 표기법으로 변경해야 한다.
+      pEl.style.fontSize = "30pt";
+
+      const pEl2 = document.querySelector("span");
+      pEl2.style.color = "darkgreen";
+      pEl2.style.fontSize = "50pt";
+      pEl2.style.fontStyle = "italic";
+
+      // 미리 만들어준 CSS 를 추가
+      pEl.classList.add("active", "red-color");
+
+      // 메서드 속성으로 조작하기
+      const aEl = document.querySelector("a");
+      const href = aEl.getAttribute("href"); // 속성명을 읽어온다.
+      aEl.setAttribute("href", "http://maplestory.nexon.com");
+      aEl.innerHTML = "메이플";
+    </script>
+  </body>
+</html>

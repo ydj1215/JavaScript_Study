@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      h1 {
+        color: white;
+        text-shadow: 2px 2px 0px black;
+        font-weight: bold;
+        font-size: 50pt;
+      }
+
+      .remain_day {
+        font-size: 40pt;
+        color: darkblue;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+
+      .what {
+        font-size: 25pt;
+      }
+
+      .fighting {
+        color: darkred;
+        font-size: 30pt;
+        font-weight: bold;
+        font-style: oblique;
+      }
+
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        width: 500px;
+        height: 500px;
+        background-color: skyblue;
+        border: 50px solid skyblue;
+        border-radius: 50%;
+
+        box-shadow: 10px 20px 0px 10px cornflowerblue;
+      }
+
+      .container:hover {
+        transform: scale(1.1);
+      }
+
+      .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>학원 수료</h1>
+      <div class="content">
+        <span class="remain_day"></span>
+        <span class="what">일 남았습니다. 힘내세요!</span>
+      </div>
+      <p class="fighting">화이팅!</p>
+    </div>
+  </body>
+  <script src="날짜간격계산.js"></script>
+</html>

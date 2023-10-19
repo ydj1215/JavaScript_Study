@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #title {
+        font-size: 3em;
+        color: darkgreen;
+      }
+
+      .text {
+        font-size: 2em;
+        color: darkred;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="title">제목</h1>
+    <p class="text">내용-1</p>
+    <p class="text">내용-2</p>
+    <script>
+      // id 속성값으로 요소 선택
+      const title = document.getElementById("title");
+      console.log(title);
+
+      // class 속성값으로 요소 선택
+      const textEl = document.getElementsByClassName("text");
+      for (let e of textEl) console.log(e); // 자바의 향상된 for문과 유사한 for of 문
+
+      // 태그에 해당하는 요소 노드 선택
+      const tagEl = document.getElementsByTagName("p");
+      for (let e of tagEl) console.log(e);
+    </script>
+  </body>
+</html>

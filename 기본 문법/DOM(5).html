@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="#" name="frm">
+      <input type="text" name="id" />
+      <input type="password" name="pw" />
+    </form>
+
+    <br />
+
+    <form action="">
+      <!-- label 의 for 과 input 의 id를 맞추면 연결 -->
+      <label for="apple"
+        ><input type="checkbox" id="apple" value="apple" />사과</label
+      >
+      <label for="banana"
+        ><input type="checkbox" id="banana" value="apple" />바나나</label
+      >
+      <label for="orange"
+        ><input type="checkbox" id="orange" value="orange" />오렌지</label
+      >
+      <label for="melon"
+        ><input type="checkbox" id="melon" value="melon" />멜론</label
+      >
+    </form>
+
+    <script>
+      // 노드 추가
+      const aEl = document.createElement("a"); // 생성
+      document.body.appendChild(aEl); // 연결
+      aEl.setAttribute("href", "https://naver.com");
+      aEl.innerHTML = "네이버";
+
+      // form
+      document.frm.id.value = "유동재";
+      document.frm.pw.value = "asdfgh";
+
+      const ckEls = document.querySelectorAll("[type = 'checkbox']");
+      for (let i = 0; i < ckEls.length; i++) {
+        // ckEls[i].checked = true;
+        if (ckEls[i].value === "orange") ckEls[i].checked = true;
+      }
+    </script>
+  </body>
+</html>
