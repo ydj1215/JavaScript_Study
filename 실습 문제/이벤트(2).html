@@ -5,35 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
       .container {
+        margin: 200px;
+        transform: rotate(5deg);
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        border: 10px solid black;
+        width: 400px;
+        height: 700px;
       }
 
-      .itz {
+      .hmm {
         width: 300px;
         height: 300px;
-        background-image: url("있지.jpeg");
+        background-image: url("GOAT.JPG");
         background-size: contain;
         background-repeat: no-repeat;
+        margin: 50px;
+      }
+
+      .hmm:hover {
+        transform: rotate(180deg);
+        transform: rotateY(180deg);
       }
 
       .what {
         display: none;
+        background-color: yellow;
+      }
+
+      .look {
+        width: 100%;
+        border: 10px solid black;
+        padding: 10px;
+        background-color: black;
+        color: white;
+        font-size: 15pt;
+        font-weight: bold;
+      }
+
+      .lookback {
+        border: 10px solid black;
+        padding: 10px;
+        background-color: black;
+        color: white;
+        font-size: 15pt;
+        font-weight: bold;
+      }
+
+      span {
+        padding: 10px;
+        font-style: italic;
+      }
+
+      .mickey {
+        background-color: darkred;
+        color: white;
+        padding: 10px;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <div class="itz"></div>
+      <div class="hmm"></div>
       <button class="look" onclick="_open()">상세 설명 보기</button>
       <div class="what">
-        <h2>그룹 있지</h2>
-        <span>요즘 인기가 많은 아이돌 그룹이다.</span>
+        <h2 class="mickey">미키마우스</h2>
         <br />
-        <button onclick="_close()">상세 설명 닫기</button>
+        <span
+          >미키 마우스 계열 작품들의 주인공. 그리고 월트 디즈니 컴퍼니의
+          상징이자 마스코트. 대중문화의 상징 중 하나로, 현재까지도 전세계
+          사람들에게 가장 많은 사랑을 받고 있는 캐릭터이기도 하다. 시대가
+          지나면서 많이 변형되어 상당히 귀여운 모습을 가지게 되었지만, 초창기
+          미키 마우스는 다소 특이하고 괴상한 캐릭터의 이미지가 강했다.</span
+        >
+        <br />
+        <button onclick="_close()" class="lookback">상세 설명 닫기</button>
       </div>
     </div>
     <script>
