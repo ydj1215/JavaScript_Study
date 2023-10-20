@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      height: 5000px;
+    }
+  </style>
+  <body>
+    <button onclick="popup()">뻥튀기</button>
+
+    <br />
+    <br />
+
+    <div>
+      <button class="btn1" onclick="sTo()">scrollTo(100,200)</button>
+      <button class="btn2" onclick="sTo()">scrollTo(100,200)</button>
+    </div>
+    <script>
+      // open() 메서드는 웹 브라우저에서 새로운 창을 여는데 사용
+      function popup() {
+        // 수정된 부분: 창의 너비와 높이는 올바른 형식으로 지정해야 합니다.
+        window.open("이벤트 객체.html", "창 이름", "width=200, height=200");
+      }
+
+      // 지정 좌표로 이동
+      function sTo() {
+        window.scrollTo(100, 200);
+      }
+
+      // 스크롤 위치를 현재 좌표로부터 상대적으로 이동
+      function sBy() {
+        window.scrollBy(100, 200);
+      }
+    </script>
+  </body>
+</html>

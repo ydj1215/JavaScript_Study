@@ -65,6 +65,7 @@
       <div class="content"></div>
     </div>
     <script>
+      // 첫번째 풀이
       function toGreen() {
         alert("초록색으로 변해라!");
         const content = document.querySelector(".content");
@@ -82,6 +83,14 @@
         const content = document.querySelector(".content");
         content.style.backgroundColor = "purple";
       }
+
+      // 두번째 풀이
+      /*
+        버튼 세개를 모두 btn으로 설정한 다음에, bth을 querySelectorAll로 선택하여, 자식 요소를 반복문으로 순회하며 다룰 수도 있다.
+        btns[i].addEventListener("click", function(){ 함수 정의 });
+
+        함수도 모두 onclick="changeBg(color)"라는 함수를 정의하여, 인자를 'green', 'orange', 'purple' 로 각각 준다면 코드를 더 간결하게 짤 수 있다.
+      */
     </script>
   </body>
 </html>

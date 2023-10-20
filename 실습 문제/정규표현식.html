@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        padding: 30px;
+        border: 10px solid black;
+        width: 400px;
+        height: auto;
+      }
+      .check_box {
+        color: red;
+        font-weight: bold;
+      }
+
+      .submit_check {
+        display: none;
+      }
+
+      input {
+        /* padding: 0; */
+        width: 77%;
+        height: 40px;
+        border: 5px solid black;
+        font-size: 20pt;
+        padding-right: ;
+      }
+
+      button {
+        position: relative;
+        height: 50px;
+        background-color: darkblue;
+        color: white;
+        border: 13px solid darkblue;
+        font-weight: bold;
+        top: -3px;
+      }
+
+      button:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>회원가입</h1>
+      <div class="input_box">
+        <div class="box">
+          <input type="text" name="" class="id" placeholder="아이디 입력" />
+          <button class="id_ok" onclick="check(1)">확인</button>
+          <div class="check_box id"></div>
+        </div>
+
+        <br />
+
+        <div class="box">
+          <input type="text" name="" class="pw" placeholder="비밀번호 입력" />
+          <button class="pw_ok" onclick="check(2)">확인</button>
+          <div class="check_box pw"></div>
+        </div>
+
+        <br />
+
+        <div class="box">
+          <input type="text" name="" class="em" placeholder="이메일 입력" />
+          <button class="em_ok" onclick="check(3)">확인</button>
+          <div class="check_box em"></div>
+        </div>
+
+        <br />
+
+        <div class="box">
+          <input type="text" name="" class="ph" placeholder="전화번호 입력" />
+          <button ckass="ph_ok" onclick="check(4)">확인</button>
+          <div class="check_box ph"></div>
+        </div>
+      </div>
+
+      <br />
+
+      <button class="submit_check">가입 요청</button>
+    </div>
+    <script src="정규표현식.js"></script>
+  </body>
+</html>
