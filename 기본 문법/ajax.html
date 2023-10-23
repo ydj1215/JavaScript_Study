@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AJAX Example</title>
+  </head>
+  <body>
+    <h1>Fetch Data with AJAX</h1>
+    <button id="fetchData">Fetch Data</button>
+    <div id="result"></div>
+
+    <script>
+      // 버튼 클릭 이벤트 핸들러
+      document
+        .getElementById("fetchData")
+        .addEventListener("click", function () {
+          // AJAX 요청 생성
+          var xhr = new XMLHttpRequest();
+
+          // GET 요청을 보낼 URL 지정
+          xhr.open("GET", "https://jsonplaceholder.typicode.com/posts/1", true);
+
+          // 요청 완료 시 실행할 콜백 함수 지정
+          xhr.onload = function () {
+            if (xhr.status === 200 || xhr.status === 201) {
+              var response = JSON.parse(xhr.responseText); // JSON 데이터 파싱
+              document.getElementById("result").innerHTML =
+                "user ID: " + response.userId + "<br>title: " + response.title;
+            }
+          };
+
+          // 요청 보내기, 데이터 요청 시작
+          xhr.send();
+        });
+    </script>
+  </body>
+</html>
